@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Abstract\ICategoryDal.cs" />
+    <Compile Remove="Abstract\IPostDal.cs" />
+    <Compile Remove="Concrete\EntityFramework\CategoryDal.cs" />
+    <Compile Remove="Concrete\EntityFramework\PostDal.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HyphenProject.Entities\HyphenProject.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

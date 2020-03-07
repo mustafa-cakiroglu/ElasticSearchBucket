@@ -1,0 +1,31 @@
+USE [TestSolution]
+GO
+/****** Object:  Table [dbo].[Product]    Script Date: 2/3/2020 8:33:54 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Product](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Brand] [nvarchar](50) NULL,
+	[ModelName] [nvarchar](50) NULL,
+	[Size] [nvarchar](50) NULL,
+	[Price] [nvarchar](50) NULL,
+	[Stock] [int] NULL,
+ CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Product] ON 
+
+INSERT [dbo].[Product] ([Id], [Brand], [ModelName], [Size], [Price], [Stock]) VALUES (1, N'LG', N'50UM7450PLA', N'50', N'3599', 3)
+INSERT [dbo].[Product] ([Id], [Brand], [ModelName], [Size], [Price], [Stock]) VALUES (2, N'LG', N'43LK5900', N'43', N'2659', 3)
+INSERT [dbo].[Product] ([Id], [Brand], [ModelName], [Size], [Price], [Stock]) VALUES (3, N'LG', N'55UK6470PLC', N'55', N'3999', 3)
+INSERT [dbo].[Product] ([Id], [Brand], [ModelName], [Size], [Price], [Stock]) VALUES (4, N'LG', N'43UM7100PLB', N'43', N'2698', 3)
+INSERT [dbo].[Product] ([Id], [Brand], [ModelName], [Size], [Price], [Stock]) VALUES (5, N'Samsung', N'55NU7100', N'55', N'5549', 3)
+INSERT [dbo].[Product] ([Id], [Brand], [ModelName], [Size], [Price], [Stock]) VALUES (6, N'Samsung', N'55RU7150', N'55', N'5200', 3)
+INSERT [dbo].[Product] ([Id], [Brand], [ModelName], [Size], [Price], [Stock]) VALUES (7, N'Samsung', N'55SU6000', N'55', N'3500', 3)
+INSERT [dbo].[Product] ([Id], [Brand], [ModelName], [Size], [Price], [Stock]) VALUES (8, N'Samsung', N'49RU7100', N'49', N'4200', 3)
+SET IDENTITY_INSERT [dbo].[Product] OFF

@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ElasticSearchOptions\Configurations\**" />
+    <EmbeddedResource Remove="ElasticSearchOptions\Configurations\**" />
+    <None Remove="ElasticSearchOptions\Configurations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Abstract\ICategoryService.cs" />
+    <Compile Remove="Abstract\ICommentService.cs" />
+    <Compile Remove="Abstract\IPostTagService.cs" />
+    <Compile Remove="Abstract\ITagService.cs" />
+    <Compile Remove="Abstract\IUserService.cs" />
+    <Compile Remove="Concrete\Service\CategoryManager.cs" />
+    <Compile Remove="Concrete\Service\CommentManager.cs" />
+    <Compile Remove="Concrete\Service\PostTagManager.cs" />
+    <Compile Remove="Concrete\Service\TagManager.cs" />
+    <Compile Remove="Concrete\Service\UserManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Elasticsearch.Net" Version="6.8.3" />
+    <PackageReference Include="NEST" Version="6.8.3" />
+    <PackageReference Include="NEST.JsonNetSerializer" Version="6.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HyphenProject.DataAccess\HyphenProject.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
