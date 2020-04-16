@@ -1,5 +1,10 @@
-pipeline {
-   agent any
+pipeline
+{
+    agent {
+        node {
+            label "nislo-pms"
+        }
+    }
    stages 
     {
         stage('build') {
