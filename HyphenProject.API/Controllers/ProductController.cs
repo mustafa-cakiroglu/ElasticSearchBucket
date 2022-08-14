@@ -1,17 +1,13 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using AutoMapper;
 using HyphenProject.Business.Abstract;
 using HyphenProject.Business.ObjectDtos;
 using HyphenProject.Business.ObjectDtos.Post;
+using HyphenProject.Business.ObjectDtos.Product;
 using HyphenProject.Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Transactions;
-using System.Linq;
-using HyphenProject.Business.ObjectDtos.Product;
-using HyphenProject.Business.Helper;
 
 namespace HyphenProject.API.Controllers
 {
@@ -55,17 +51,17 @@ namespace HyphenProject.API.Controllers
         [HttpGet("bulkInsertAsync")]
         public async Task<bool> BulkAddOrUpdateAsync()
         {
-
             var productList = _productService.GetAllList();
             var productElasticIndexList = new List<ProductElasticIndexDto>();
+
             foreach (var product in productList)
             {
                 productElasticIndexList.Add(GetElasticIndexItem(product));
             }
-            await _productService.BulkInsertAsync(productElasticIndexList);
-            return await Task.FromResult(true);
-            throw new InvalidArgumentException();
 
+            await _productService.BulkInsertAsync(productElasticIndexList);
+
+            return await Task.FromResult(true);
         }
 
         [ApiExplorerSettings(IgnoreApi = true)]

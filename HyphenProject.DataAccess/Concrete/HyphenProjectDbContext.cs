@@ -16,7 +16,7 @@ namespace HyphenProject.DataAccess.Concrete
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Password=Asdasdxx1;Persist Security Info=True;User ID=mustafa.cakiroglu;Initial Catalog=TestSolution;Data Source=192.168.2.43");
+            optionsBuilder.UseSqlServer("Password=Sunday24;Persist Security Info=True;User ID=sa;Initial Catalog=TestSolution;Data Source=.");
         }
 
         public DbSet<Product> Product { get; set; }

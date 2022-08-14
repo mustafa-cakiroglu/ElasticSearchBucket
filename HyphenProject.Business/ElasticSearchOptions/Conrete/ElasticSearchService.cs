@@ -1,14 +1,10 @@
-﻿using HyphenProject.Business.ElasticSearchOptions.Abstract;
-using HyphenProject.Business.ObjectDtos.Post;
-using HyphenProject.Entities.Models;
-using Nest;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using HyphenProject.Business.ElasticSearchOptions.Abstract;
+using HyphenProject.Business.ObjectDtos.Post;
+using Nest;
 
 namespace HyphenProject.Business.ElasticSearchOptions.Conrete
 {

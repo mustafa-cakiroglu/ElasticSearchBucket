@@ -147,6 +147,7 @@ namespace HyphenProject.Business.Concrete.Manager
         {
             await _elasticSearchService.CreateProductIndexAsync<ProductElasticIndexDto, int>(ElasticSearchItemsConst.ProductIndexName);
             await _elasticSearchService.BulkAddOrUpdate<ProductElasticIndexDto, int>(ElasticSearchItemsConst.ProductIndexName, productList);
+
             return await Task.FromResult<bool>(true);
         }
     }
